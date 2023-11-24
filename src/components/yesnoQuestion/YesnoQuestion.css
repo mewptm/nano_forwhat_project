@@ -1,0 +1,58 @@
+
+.yes-button {
+  display: block;
+  width: 100%; /*ความกว้าง*/
+  padding: 20px; /*ขนาดปุ่ม*/
+  margin-bottom: 25px;
+  background-color: #FFFF;
+  border: 1px solid #ccc;
+  color: rgb(13, 13, 13);
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px 1px #b2b2b2;
+  font-size: larger;
+  cursor: pointer;
+  text-align :center;
+}
+
+.no-button {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #FFFF;
+  border: 1px solid #ccc;
+  color: rgb(13, 13, 13);
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px 1px #b2b2b2;
+  font-size: larger;
+  cursor: pointer;
+  text-align :center;
+}
+
+.button-container {
+  display: flex;
+  padding: 30px;
+  justify-content: center; 
+  
+}
+
+.no-button:active{
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.yes-button:active{
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.yn-container{
+  position: absolute; 
+  left: -80px;
+}
+
+.Ynquiztion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
