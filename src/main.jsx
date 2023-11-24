@@ -12,6 +12,8 @@ import Ynquiz2 from './components/yesnoQuestion/Ynquiz2';
 import Ynquiz3 from './components/yesnoQuestion/Ynquiz3';
 import Question from './components/Question/Question.jsx';
 import Choice from './components/Choice/Choice.jsx';
+import Choice2 from './components/Choice/choice2.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/yesno_1",
@@ -33,6 +35,11 @@ const router = createBrowserRouter([
     path: "/Choice",
     element: <Choice/>,
   },
+  {
+    path: "/Choice2",
+    element: <Choice2/>,
+  },
+  
 
   ]);
 
