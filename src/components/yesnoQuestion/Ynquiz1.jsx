@@ -10,11 +10,11 @@ function Ynquiz1 ()  {
     <>
     <div className='Ynquiztion'>
     
-    <h2> เป้าหมายที่คุณต้องการ ลดไขมัน</h2>
+    <h2> เป้าหมายที่คุณต้องการ ลดนํ้าหนัก</h2>
       <Image 
         width={500}
         height={500}
-        src="/img/10.jpg"
+        src="/img/yn1.jpg"
       /><br></br>
      
       <div className="button-container">

@@ -14,7 +14,7 @@ function Ynquiz2 ()  {
       <Image 
         width={500}
         height={500}
-        src="/img/l.jpg"
+        src="/img/yn2.jpg"
       /><br></br>
       
       <div className="button-container">
