@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react';
-import { Row, Col, Card } from 'antd';
+import { Row, Col } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Choice from '../Choice/Choice';
 import './Question.css';
 import Ynquiz1 from '../yesnoQuestion/Ynquiz1';
+import Choice2 from '../Choice/choice2';
+
 
 const Question = () => {
  const questions = [
@@ -76,6 +78,16 @@ const Question = () => {
 							  'ปานกลาง',
 							  'เร็วที่สุด'],
 				  },
+				  {
+					id: 10,
+					question: 'ข้อจำกัดด้านการทานอาหาร',
+					options: [<Choice2/>],
+				  },
+				  {
+					id: 11,
+					question: 'โรคประจำตัวของคุณ (เลือกได้มากกว่า 1 ข้อ)',
+					options: [<Choice/>],
+				  },
 		  
   ];
 
@@ -83,36 +95,51 @@ const Question = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
-  const [isHighLighted, setIsHighLighted] = useState(false)
+ 
 
-  const handleOptionSelect = (option) => {
+  const handleOptionSelect = (event, option) => {
     setSelectedOption(option);
-
-	// setIsHighLighted(!isHighLighted)
+    highlightButton(event.target);
   };
 
+  function removeHighlight() {
+    const buttons = document.getElementsByTagName('button');
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('highlight');
+    }
+  }
 //   const highlightColor = () => {
 // 	backgroundColor : isHighLighted ? 'red' : 'white'
 //   }
   const handleNextQuestion = () => {
     const isCorrect = selectedOption === questions[currentQuestion].answer;
-    if (isCorrect) {
-      setScore(score + 1);
+    if (isCorrect) { setScore(score + 1);
     }
 
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
       setSelectedOption('');
+	  removeHighlight();
     } else {
       setShowScore(true);
     }
   };
 
+  function highlightButton(button) {
+    const buttons = document.getElementsByTagName('button');
+    for (let i = 0; i < buttons.length; i++) {
+      if (buttons[i] === button) {
+        buttons[i].classList.add('highlight');
+      } else {
+        buttons[i].classList.remove('highlight');
+      }
+    }
+  }
+
   return (
 	<Content style={{ padding: '0 50px' }}>
 	<Col span={12} offset={6}>
-	
     <Col span={24} style={{ textAlign: 'center' }}>
         {showScore ? (
           <Row>
@@ -132,20 +159,24 @@ const Question = () => {
             </Col>
             <Col span={12} offset={6}>
               <div className='answer'>
-                {questions[currentQuestion].options.map((option) => (
-                  <button
+                {questions[currentQuestion].options.map((option, index) => (
+                  <div key={index} >
+				  <button 
+				    type="button"
                     className='answer-button'
-                    key={option}
-                    onClick={() => handleOptionSelect(option)}
+                    onClick={(event) => {handleOptionSelect(event, option);}}
                     style={{ margin: '5px' } }
                   >
                     {option}
                   </button>
+				  </div>
                 ))}
               </div>
 			  <Col span={12} offset={6}>
               <button className='next-button'
-                onClick={handleNextQuestion} disabled={!selectedOption}>
+                onClick={handleNextQuestion} 
+				disabled={!selectedOption}
+				>
                     หน้าถัดไป
               </button>
 			  </Col>
@@ -153,7 +184,6 @@ const Question = () => {
           </Row>
         )}
     </Col>
-	
 	</Col>
 	</Content>
   );
