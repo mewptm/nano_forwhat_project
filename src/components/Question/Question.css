@@ -41,11 +41,20 @@
   }
   
   .answer-button:active{
-    background-color: #b61f1f;
+    background-color: #757575;
+    color: rgb(255, 255, 255);
     transform: translateY(5px);
     outline: none;
   }
-  
+
+  .answer-button::selection{
+    background-color: #ffffff;
+  }
+
+  .highlight {
+    background-color: #757575;
+    color: rgb(255, 255, 255);
+  }
   
   .next-button{
     display: block;
@@ -62,6 +71,12 @@
     text-align :center; /* Add this line to align text to the left */
   }
   
+  .next-button:hover{
+    background-color: #dcdcdc;/* สีปุ่มเช็คคำตอบตอนชี้*/
+    color: #000000;
+    box-shadow: 0 4px 0 0 #757575;
+  }
+
   .next-button:active {
     box-shadow: none;
     transform: translateY(5px);
