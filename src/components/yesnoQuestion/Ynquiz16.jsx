@@ -4,28 +4,29 @@ import { Link } from 'react-router-dom';
 import { VscChevronLeft } from "react-icons/vsc";
 import './YesnoQuestion.css';
 
-function Ynquiz4() {
+function Ynquiz16() {
   return (
     <div>
       <div className='Ynquiztion'>
-        <h2> เป้าหมายที่คุณต้องการ เสริมสร้างกล้ามเนื้อ </h2>
+        <h2> พฤติกรรมของคุณในช่วงระหว่างวันคือ </h2> 
+        <h2> ลุกหรือเดินเพื่อยืดเส้นสายเกือบทั้งวัน </h2>
         <Image
           width={500}
           height={500}
-          src="/img/yn4.jpg"
+          src="/img/yn16.jpg"
         /><br />
         <div className="button-container">
-          <Link to="/yesno_5">
+          <Link to="/yesno_17">
             <Button className='yes-button'>ไม่</Button> {/* Changed button to Ant Design's Button component */}
           </Link>
           <h4>&nbsp; &nbsp; &nbsp; หรือ &nbsp; &nbsp; &nbsp;</h4>
-          <Link to="/yesno_5"> {/* Changed the route for the "No" response */}
+          <Link to="/yesno_17"> {/* Changed the route for the "No" response */}
             <Button className='no-button'>ใช่</Button> {/* Changed button to Ant Design's Button component */}
           </Link>
         </div>
       </div>
       <div className='chevron-icon'>
-      <Link to="/yesno_3">
+      <Link to="/yesno_15">
         <Button // Changed button to Ant Design's Button component
           shape="circle"
           style={{ position: 'absolute', left: 300, top: 10, fontSize:'22px', width: '40px', height: '40px'  }}
@@ -37,4 +38,4 @@ function Ynquiz4() {
   );
 }
 
-export default Ynquiz4;
+export default Ynquiz16;
