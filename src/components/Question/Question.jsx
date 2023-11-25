@@ -108,9 +108,7 @@ const Question = () => {
       buttons[i].classList.remove('highlight');
     }
   }
-//   const highlightColor = () => {
-// 	backgroundColor : isHighLighted ? 'red' : 'white'
-//   }
+
   const handleNextQuestion = () => {
     const isCorrect = selectedOption === questions[currentQuestion].answer;
     if (isCorrect) { setScore(score + 1);
@@ -137,10 +135,30 @@ const Question = () => {
     }
   }
 
+  const handlePreviousQuestion = () => { /*ทำปุ่มย้อนกลับคำถาม */
+	const prevQuestion = currentQuestion - 1;
+	if (prevQuestion >= 0) {
+	  setCurrentQuestion(prevQuestion);
+	  setSelectedOption('');
+	  removeHighlight();
+	  setShowScore(false); // Set to false to show questions again if navigating back
+	}
+  };
+
   return (
 	<Content style={{ padding: '0 50px' }}>
-	<Col span={12} offset={6}>
-    <Col span={24} style={{ textAlign: 'center' }}>
+    <Col span={12} offset={6}>
+      <Col span={24} style={{ textAlign: 'center' }}>
+	  <Col span={12} offset={6}>
+	  {currentQuestion > 0 && (
+          <button
+            className='circular-button' // Apply circular button styles
+            onClick={handlePreviousQuestion}
+          >
+            &lt;
+          </button>
+  	)}
+		</Col>
         {showScore ? (
           <Row>
             <Col span={24}>
