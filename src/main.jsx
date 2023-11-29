@@ -235,7 +235,7 @@ const router = createBrowserRouter([
     element: <Height_1/>,
   },
   {
-    path: "/Weight1",
+    path: "/Weight_1",
     element: <Weight_1/>,
   },
   {
