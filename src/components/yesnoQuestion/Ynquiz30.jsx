@@ -15,11 +15,11 @@ function Ynquiz30() {
           src="/img/cat.jpg"
         /><br />
         <div className="button-container">
-          <Link to="/yesno_1">
+          <Link to="/Calendar_1">
             <Button className='yes-button'>ไม่</Button> {/* Changed button to Ant Design's Button component */}
           </Link>
           <h4>&nbsp; &nbsp; &nbsp; หรือ &nbsp; &nbsp; &nbsp;</h4>
-          <Link to="/yesno_1"> {/* Changed the route for the "No" response */}
+          <Link to="/Calendar_1"> {/* Changed the route for the "No" response */}
             <Button className='no-button'>ใช่</Button> {/* Changed button to Ant Design's Button component */}
           </Link>
         </div>
