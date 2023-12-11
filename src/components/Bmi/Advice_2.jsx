@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Button } from 'antd'; // Import Button component from Ant Design
+import { Button } from 'antd'; // Import Button component from Ant Design
 import { Link } from 'react-router-dom';
 import { VscChevronLeft } from "react-icons/vsc";
 import './Bmi.css';
@@ -20,16 +20,15 @@ function Advice_2() {
 
         <div >
           <Link to="/Bmi_2">
-            <Button className='back-button'>ย้อยกลับ</Button> {/* Changed button to Ant Design's Button component */}
+            <Button className='back-button'>ย้อนกลับ</Button> {/* Changed button to Ant Design's Button component */}
           </Link>
-        
         </div>
       </div>
       <div className='chevron-icon'>
       <Link to="/Bmi_2">
         <Button // Changed button to Ant Design's Button component
           shape="circle"
-          style={{ position: 'absolute', left: 300, top: 10, fontSize:'22px', width: '40px', height: '40px'  }}
+          style={{ position: 'absolute', left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
           icon={<VscChevronLeft />}
         />
       </Link>

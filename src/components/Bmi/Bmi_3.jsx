@@ -34,7 +34,7 @@ function Bmi_3() {
       <Link to="/Bmi">
         <Button // Changed button to Ant Design's Button component
           shape="circle"
-          style={{ position: 'absolute', left: 300, top: 10, fontSize:'22px', width: '40px', height: '40px'  }}
+          style={{ position: 'absolute', left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
           icon={<VscChevronLeft />}
         />
       </Link>
