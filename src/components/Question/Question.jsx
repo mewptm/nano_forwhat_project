@@ -1,11 +1,12 @@
 
 import React, { useState } from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col} from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Choice from '../Choice/Choice';
 import './Question.css';
 import Ynquiz1 from '../yesnoQuestion/Ynquiz1';
 import Choice2 from '../Choice/choice2';
+import { useMediaQuery } from 'react-responsive';
 
 
 const Question = () => {
@@ -146,14 +147,16 @@ const Question = () => {
 		}
 	};
 
+
 	return (
-		<Content style={{ padding: '0 50px' }}>
+			<div className='wrapper'> 
+		  <Content style={{ padding: '0 50px' }}>
 			<Col span={12} offset={6}>
 				<Col span={24} style={{ textAlign: 'center' }}>
-					<Col span={12} offset={6}>
+					<Col >
 						{currentQuestion > 0 && (
 							<button
-								className='circular-button' // Apply circular button styles
+								className='circular-button' // ปุ่มย้อนกลับ
 								onClick={handlePreviousQuestion}
 							>
 								&lt;
@@ -162,49 +165,50 @@ const Question = () => {
 					</Col>
 					{showScore ? (
 						<Row>
-							<Col span={24}>
+							<Col >
 								<div className='question'>
 									<Ynquiz1 />
 								</div>
 							</Col>
 						</Row>
 					) : (
-						<Row>
-							<Col span={24}>
+						<div >
+							<div >
 								<div className='question'>
 									<h2>Question {currentQuestion + 1}</h2>
 									<p>{questions[currentQuestion].question}</p>
 								</div>
-							</Col>
-							<Col span={12} offset={6}>
+							</div>
+							<Col span={24} >
 								<div className='answer'>
-									{questions[currentQuestion].options.map((option, index) => (
-										<div key={index} >
-											<button
-												type="button"
-												className='answer-button'
-												onClick={(event) => { handleOptionSelect(event, option); }}
-												style={{ margin: '5px' }}
-											>
-												{option}
-											</button>
+  									{questions[currentQuestion].options.map((option, index) => (
+    								<div key={index}>
+      									<button
+        								type="button"
+        								className={`answer-button ${selectedOption === option ? 'highlight' : ''}`}
+        								onClick={(event) => handleOptionSelect(event, option)}
+       									style={{ margin: '25px' }}
+      								>
+        								{option}
+      									</button>
+    									</div>
+  										))}
 										</div>
-									))}
-								</div>
-								<Col span={12} offset={6}>
+								<div> 
 									<button className='next-button'
 										onClick={handleNextQuestion}
 										disabled={!selectedOption}
 									>
 										หน้าถัดไป
 									</button>
-								</Col>
+								</div>
 							</Col>
-						</Row>
+						</div>
 					)}
 				</Col>
 			</Col>
 		</Content>
+	</div>
 	);
 };
 

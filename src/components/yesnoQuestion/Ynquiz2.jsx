@@ -9,9 +9,7 @@ function Ynquiz2() {
     <div>
       <div className='Ynquiztion'>
         <h2> เป้าหมายที่คุณต้องการ ลดไขมัน </h2>
-        <Image
-          width={500}
-          height={500}
+        <Image className='imgmedia'
           src="/img/yn2.jpg"
         /><br />
         <div className="button-container">
@@ -28,7 +26,7 @@ function Ynquiz2() {
       <Link to="/yesno_1">
         <Button // Changed button to Ant Design's Button component
           shape="circle"
-          style={{ position: 'absolute', left: 300, top: 10, fontSize:'22px', width: '40px', height: '40px'  }}
+          style={{ left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
           icon={<VscChevronLeft />}
         />
       </Link>

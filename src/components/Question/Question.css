@@ -1,105 +1,171 @@
 .quiz-card {
-    padding: 100px;
-    background-color: #BCCEFB;
-    /*border: 1px solid #BCCEFB;*/
-    border-radius: 5px;  
-  }
+  padding: 100px;
+  background-color: #BCCEFB;
+  /*border: 1px solid #BCCEFB;*/
+  border-radius: 5px;  
+}
+.wrap {
+  align-items: normal!important;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap!important
+}
+.question {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  margin-bottom: 20px;
+  font-size: larger;
+}
+
+.answer {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.answer-button {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 17px;
+  background-color: #FFFF;
+  border: 1px solid #ccc;
+  color: rgb(13, 13, 13);
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px 1px #b2b2b2;
+  font-size: larger;
+  cursor: pointer;
+  text-align :center;
   
+}
+
+.answer-button:active{
+  background-color: #757575;
+  color: rgb(255, 255, 255);
+  transform: translateY(5px);
+  outline: none;
+}
+
+.answer-button::selection{
+  background-color: #ffffff;
+}
+
+.highlight {
+  background-color: #757575;
+  color: rgb(255, 255, 255);
+}
+
+.next-button{
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 12px;
+  background-color: #FFFF;
+  border: 1px solid #ccc;
+  color: rgb(13, 13, 13);
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px 1px #b2b2b2;
+  font-size: larger;
+  cursor: pointer;
+  text-align :center; /* Add this line to align text to the left */
+}
+
+.next-button:hover{
+  background-color: #dcdcdc;/* สีปุ่มเช็คคำตอบตอนชี้*/
+  color: #000000;
+  box-shadow: 0 4px 0 0 #757575;
+}
+
+.next-button:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.circular-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffffff; /* เปลี่ยนสีตามที่ต้องการ */
+  color: #757575;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  left: -70px;
+  top: 30px;
+}
+
+/*MEDIA*/
+@media screen and (max-width: 1400px) {
   .question {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 2rem;
   }
-  
-  .question-text {
-    margin-bottom: 20px;
-    font-size: larger;
-  }
-  
-  .answer {
-    font-size: larger;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .answer-button {
-    display: block;
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 17px;
-    background-color: #FFFF;
-    border: 1px solid #ccc;
-    color: rgb(13, 13, 13);
-    border-radius: 5px;
-    box-shadow: 3px 3px 2px 1px #b2b2b2;
-    font-size: larger;
-    cursor: pointer;
-    text-align :center; /* Add this line to align text to the left */
-    position: relative;
-    
-  }
-  
-  .answer-button:active{
-    background-color: #757575;
-    color: rgb(255, 255, 255);
-    transform: translateY(5px);
-    outline: none;
-  }
-
-  .answer-button::selection{
-    background-color: #ffffff;
-  }
-
-  .highlight {
-    background-color: #757575;
-    color: rgb(255, 255, 255);
-  }
-  
-  .next-button{
-    display: block;
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 12px;
-    background-color: #FFFF;
-    border: 1px solid #ccc;
-    color: rgb(13, 13, 13);
-    border-radius: 5px;
-    box-shadow: 3px 3px 2px 1px #b2b2b2;
-    font-size: larger;
-    cursor: pointer;
-    text-align :center; /* Add this line to align text to the left */
-  }
-  
-  .next-button:hover{
-    background-color: #dcdcdc;/* สีปุ่มเช็คคำตอบตอนชี้*/
-    color: #000000;
-    box-shadow: 0 4px 0 0 #757575;
-  }
-
-  .next-button:active {
-    box-shadow: none;
-    transform: translateY(5px);
-  }
-
-  .circular-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: #757575; /* เปลี่ยนสีตามที่ต้องการ */
-    color: rgb(255, 255, 255);
+  .answer-button{
+    width: 50vw;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    outline: none;
-    position: absolute;
-    left: -250px;
-    top: 30px;
   }
-  
-  @media only screen and (max-width: 1280px) {
-    body {
-      background-color: lightblue;
-    }
+  .next-button{
+    width: 30vw !important;
   }
+}
+/* 1200px หรือน้อยกว่า */
+@media screen and (max-width: 1200px) {
+  .question {
+    font-size: 1.6rem;
+  }
+  .answer-button{
+    width: 50vw;
+  }
+  .next-button{
+    width: 30vw !important;
+  }
+}
+
+/* 992px หรือน้อยกว่า */
+@media screen and (max-width: 992px) {
+  .question {
+    font-size: 1.6rem;
+  }
+  .answer-button {
+    width: 50vw;
+  }
+  .next-button {
+    width: 30vw !important;
+  }
+}
+
+/* 768px หรือน้อยกว่า */
+@media screen and (max-width: 768px) {
+  .question {
+    font-size: 1.5rem;
+  }
+  .answer-button {
+    width: 40vw;
+  }
+  .next-button {
+    width: 30vw !important;
+  }
+}
+
+/* 576px หรือน้อยกว่า */
+@media screen and (max-width: 576px) {
+  .question {
+    font-size: 1.4rem;
+  }
+  .answer-button {
+    width: 40vw;
+  }
+  .next-button {
+    width: 30vw !important;
+  }
+}

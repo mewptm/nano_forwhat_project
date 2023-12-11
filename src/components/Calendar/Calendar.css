@@ -125,3 +125,20 @@
     background: #6f48eb;
     color: white;
    }
+   .next-button {
+    display: block; /* สร้างบริเวณเป็น block */
+    margin: 0 auto; /* จัดตำแหน่งตรงกลาง */
+  }
+  
+  .chevron-icon {
+    position: absolute;
+    left: 300px; /* ปรับตำแหน่งตามที่คุณต้องการ */
+    top: 10px; /* ปรับตำแหน่งตามที่คุณต้องการ */
+  }
+  
+  .chevron-icon button {
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+  }
+  
