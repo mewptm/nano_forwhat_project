@@ -37,18 +37,18 @@ function Bmi(props) {
     }
   };
 
-  const renderContent = () => {
+  const RenderBmiComponent = ({ bmiValue }) => {
     switch (currentPage) {
       case 1:
-        return <Bmi_1 bmiValue={bmi.toFixed(1)}/>;
+        return <Bmi_1 bmiValue={bmiValue} />;
       case 2:
-        return <Bmi_2 bmiValue={bmi.toFixed(1)}/>;
+        return <Bmi_2 bmiValue={bmiValue} />;
       case 3:
-        return <Bmi_3 bmiValue={bmi.toFixed(1)}/>;
+        return <Bmi_3 bmiValue={bmiValue} />;
       case 4:
-        return <Bmi_4 bmiValue={bmi.toFixed(1)}/>
+        return <Bmi_4 bmiValue={bmiValue} />;
       case 5:
-        return <Bmi_5 bmiValue={bmi.toFixed(1)}/>
+        return <Bmi_5 bmiValue={bmiValue} />;
       default:
         return (
           <div>
@@ -61,6 +61,24 @@ function Bmi(props) {
         );
     }
   };
+  
+  const renderContent = () => {
+    if (currentPage >= 1 && currentPage <= 5) {
+      return <RenderBmiComponent bmiValue={bmi.toFixed(1)} />;
+    } else {
+      return (
+        <div>
+          <Weight onWeightChange={(value) => setWeight(value)} />
+          <br />
+          <Height onHeightChange={(value) => setHeight(value)} />
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          <button className='bmi-button' onClick={calculateBmi}>คำนวณ BMI</button>
+        </div>
+        /* setWeight = ตัวกรอกน้ำหนัก , setHeight = ตัวกรอกส่วนสูง */
+      );
+    }
+  };
+  
 
   const checkBmiResult = (bmiValue) => {
     if (bmiValue === 0) return '-';

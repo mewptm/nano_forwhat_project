@@ -24,15 +24,6 @@ function Ynquiz1() {
           </Link>
         </div>
       </div>
-      <div className='chevron-icon'>
-      <Link to="/Question">
-        <Button // Changed button to Ant Design's Button component
-          shape="circle"
-          style={{ position: 'absolute', left: 300, top: 10, fontSize:'22px', width: '40px', height: '40px'  }}
-          icon={<VscChevronLeft />}
-        />
-      </Link>
-      </div>
     </div>
   );
 }

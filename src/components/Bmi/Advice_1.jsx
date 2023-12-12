@@ -20,16 +20,15 @@ function Advice_1() {
 
         <div >
           <Link to="/Bmi_1">
-            <Button className='back-button'>ย้อยกลับ</Button> {/* Changed button to Ant Design's Button component */}
+            <Button className='back-button'>ย้อนกลับ</Button> {/* Changed button to Ant Design's Button component */}
           </Link>
-        
         </div>
       </div>
       <div className='chevron-icon'>
       <Link to="/Bmi_1">
         <Button // Changed button to Ant Design's Button component
           shape="circle"
-          style={{ position: 'absolute', left: 300, top: 10, fontSize:'22px', width: '40px', height: '40px'  }}
+          style={{ position: 'absolute', left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
           icon={<VscChevronLeft />}
         />
       </Link>
