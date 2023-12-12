@@ -8,7 +8,7 @@
   border: 1px solid hsl(0, 0%, 80%);
   color: rgb(13, 13, 13);
   border-radius: 5px;
-  box-shadow: 3px 3px 2px 1px #b2b2b2;
+  box-shadow: 6px 6px 4px 2px #b2b2b2;
   font-size: larger;
   cursor: pointer;
   text-align :center;
@@ -23,7 +23,7 @@
   border: 1px solid #ccc;
   color: rgb(13, 13, 13);
   border-radius: 5px;
-  box-shadow: 3px 3px 2px 1px #b2b2b2;
+  box-shadow: 6px 6px 4px 2px #b2b2b2;
   font-size: larger;
   cursor: pointer;
   text-align :center;
