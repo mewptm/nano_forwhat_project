@@ -1,8 +1,8 @@
 body {
-  overflow: hidden;
+
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont,/* 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/'ThaiSans  Neue',
+  font-family: -apple-system, BlinkMacSystemFont,
+  'ThaiSans  Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,9 +17,7 @@ code {
     monospace;
 }
 
-@media(max-width: 678px){
- 
-}
+
 
 .quiz-card {
   padding: 100px;

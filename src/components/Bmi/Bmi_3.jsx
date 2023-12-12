@@ -9,9 +9,8 @@ function Bmi_3() {
     <div>
         <div className='Bmi1'>
         <h2> ค่าดัชนีมวลกาย (BMI) </h2>
-        <Image
-          width={300}
-          height={300}
+        < Image className='ant-image-img'
+          width="60%"
           src="/img/10.jpg"
         /><br />
         <div className='child-bmi'>BMI  23 - 24.90</div>

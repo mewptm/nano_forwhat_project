@@ -30,8 +30,8 @@ function Height_1(props) {
       <br />
       <Image
           width={300}
-          height={300}
-          src="/img/10.jpg"
+          height={500}
+          src="/img/h1.jpg"
         />
         <div>
           <br/>

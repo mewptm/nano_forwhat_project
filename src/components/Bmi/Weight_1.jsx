@@ -32,7 +32,7 @@ function Weight_1(props) {
       <Image
           width={300}
           height={300}
-          src="/img/10.jpg"
+          src="/img/w1.jpg"
         />
         <div>
           <br/>

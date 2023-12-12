@@ -9,11 +9,12 @@ function Bmi_1() {
     <div>
         <div className='Bmi1'>
         <h2> ค่าดัชนีมวลกาย (BMI) </h2>
-        <Image
-          width={300}
-          height={300}
+        <br/>
+        < Image className='ant-image-img'
+          width="60%"
           src="/img/10.jpg"
-        /><br />
+        />
+        <br />
         <div className='child-bmi'>BMI น้อยกว่า 18.50</div>
         <div className='child-bmi'>อยู่ในเกณฑ์ น้ำหนักน้อย/ผอม</div>
         <div className='child-bmi'>ภาวะเสี่ยงต่อโรค มากกว่าคนปกติ</div>
@@ -30,16 +31,7 @@ function Bmi_1() {
           </Link>
         </div>
       </div>
-      <div className='chevron-icon'>
-      <Link to="/Bmi">
-        <Button // Changed button to Ant Design's Button component
-          shape="circle"
-          style={{ position: 'absolute', left: 300, top: 10, fontSize:'22px', width: '40px', height: '40px'  }}
-          icon={<VscChevronLeft />}
-        />
-      </Link>
-
-      </div>
+     
     </div>
   )
 }

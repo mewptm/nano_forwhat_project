@@ -6,7 +6,7 @@
   height: 100%;
   line-height: 1.5;
   display: block;
-  width: 100%; /*ความกว้าง*/
+  width: 250px; /*ความกว้าง*/
   padding: 15px; /*ขนาดปุ่ม*/
   margin-bottom: 25px;
   background-color: #FFFF;
@@ -27,7 +27,8 @@
     height: 100%;
     line-height: 1.5;
     display: block;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     padding: 15px;
     margin-bottom: 55px;
     background-color: #FFFF;
@@ -48,7 +49,8 @@
   height: 100%;
   line-height: 1.5;
   display: block;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   padding: 15px;
   margin-bottom: 25px;
   background-color: #FFFF;
@@ -96,16 +98,15 @@
   transform: translateY(5px);
 }
 
-.yn-container{
-  position: absolute; 
-  left: -80px;
-}
+
 
 .Bmi1 {
+  padding: 10px;
   display: flex;
   margin: 20px;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
 }
 
 .highlight {
@@ -113,21 +114,25 @@
   color: rgb(255, 255, 255);
 }
 
+.ant-image-img {
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+  align-items: center;
+  vertical-align: middle;
+}
+
 .chevron-icon {
   position: absolute;
   left: 60px;
   top: 20px;
   width: 70%;
+  max-width: 300px;
   height: 70%;
   color: #000000;
 }
 
-.yes-button,
-.no-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 
 .child-bmi
@@ -141,7 +146,7 @@
     box-shadow: 3px 3px 2px 1px #b2b2b2;
     padding: 10px;
     margin: 5px auto; /* จัดให้ตรงกลาง */
-    width: 300px; /* กำหนดความกว้าง */
+    width: 60%; /* กำหนดความกว้าง */
     text-align: center; /* จัดให้ข้อความอยู่ที่ซ้าย */
   }
 
@@ -156,7 +161,7 @@
     box-shadow: 3px 3px 2px 1px #b2b2b2;
     padding: 10px;
     margin: 5px auto; /* จัดให้ตรงกลาง */
-    width: 300px; /* กำหนดความกว้าง */
+    width: 60%; /* กำหนดความกว้าง */
     text-align: left; /* จัดให้ข้อความอยู่ที่ซ้าย */
   }
   
@@ -165,6 +170,7 @@
     display: inline-block;
   }
   
+
   .bmi-button {
    
     margin: 0 auto;
@@ -174,8 +180,11 @@
     height: 100%;
     line-height: 1.5;
     display: block;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     padding: 15px;
+    position: relative; /* กำหนดให้มีการจัดตำแหน่งแบบสัมพันธ์ */
+    top: 200px; /* กำหนดระยะห่างด้านล่างขององค์ประกอบ 20px */
     margin-bottom: 55px;
     background-color: #FFFF;
     border: 1px solid #ccc;
@@ -196,5 +205,86 @@
   .bmi-button:active{
     box-shadow: none;
     transform: translateY(5px);
+
   }
+  input {
+    padding: 16px;
+    width: calc(100% - 32px);
+    max-width: 300px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 1em auto;
+    margin-bottom: 1em;
+    font-size: 1rem;
+    font-family: 'Itim', cursive;
+    background-color: #fff;
+    color: #111;
+
+
+  }
+       
+    @media screen and (max-width: 1200px) {
+      .Bmi1 {
+        font-size: 1.6rem;
+      }
+      .advice-button,
+      .next-button,
+      .back-button {
+        width: 50vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+    }
+
+    
+    @media screen and (max-width: 992px) {
+      .Bmi1 {
+        font-size: 1.6rem;
+      }
+      .child-bmi,
+      .child-advice {
+        width: 50vw;
+      }
+      .advice-button,
+      .next-button,
+      .back-button{
+        width: 45vw;
+      }
+    }
+
+    
+    @media screen and (max-width: 768px) {
+      .Bmi1 {
+        font-size: 1.5rem;
+      }
+      .child-bmi,
+      .child-advice {
+        width: 40vw;
+      }
+      .advice-button,
+      .next-button,
+      .back-button {
+        width: 30vw;
+      }
+    }
+
+    
+    @media screen and (max-width: 576px) {
+      .Bmi1 {
+        font-size: 1.5rem;
+      }
+      .child-bmi,
+      .child-advice {
+        width: 40vw;
+      }
+      .advice-button,
+      .next-button,
+      .back-button {
+        width: 20vw;
+      }
+    } 
+  
   

@@ -20,7 +20,7 @@ function Target() {
       <Image
           width={300}
           height={300}
-          src="/img/10.jpg"
+          src="/img/t1.jpg"
         />
         <div>
           <br/>

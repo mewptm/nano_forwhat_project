@@ -7,6 +7,7 @@ import Bmi_2 from './Bmi_2';
 import Bmi_3 from './Bmi_3';
 import Bmi_4 from './Bmi_4';
 import Bmi_5 from './Bmi_5';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Bmi(props) {
   const [weight, setWeight] = useState(0);
@@ -54,7 +55,7 @@ function Bmi(props) {
             <Weight onWeightChange={(value) => setWeight(value)} />
             <br/>
             <Height onHeightChange={(value) => setHeight(value)} />
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            
             <button className='bmi-button' onClick={calculateBmi}>คำนวณ BMI</button>
           </div>
         );
