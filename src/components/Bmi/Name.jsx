@@ -13,7 +13,7 @@ function Name() {
   };
 
   return (
-    <div className=''>
+    <div className='continer'>
       <div className={styles.Bmi1} >
         <h2>กรุณากรอกข้อมูลดังนี้</h2>
         <br />
@@ -49,7 +49,7 @@ function Name() {
           <Link to="/Height_1">
             <Button
               shape="circle"
-              style={{right:270 , top: 10, fontSize: '22px', width: '50px', height: '50px' }}
+              style={{ left: 10, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
               icon={<VscChevronLeft />}
             />
           </Link>
