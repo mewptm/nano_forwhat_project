@@ -2,7 +2,7 @@ import React from 'react'
 import { Image, Button } from 'antd'; // Import Button component from Ant Design
 import { Link } from 'react-router-dom';
 import { VscChevronLeft } from "react-icons/vsc";
-import './Bmi.css';
+// import './Bmi.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function Advice_4() {
   return (
@@ -27,14 +27,13 @@ function Advice_4() {
         </div>
       </div>
       <div className='chevron-icon'>
-      <Link to="/Bmi_4">
+        <Link to="/Bmi_4">
         <Button // Changed button to Ant Design's Button component
           shape="circle"
-          style={{ position: 'absolute', left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
+          style={{ left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
           icon={<VscChevronLeft />}
         />
       </Link>
-
       </div>
     </div>
   )

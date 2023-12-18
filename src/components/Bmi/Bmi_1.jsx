@@ -1,8 +1,8 @@
 import React from 'react'
-import { Image, Button } from 'antd'; // Import Button component from Ant Design
+import { Image, Button } from 'antd'; 
 import { Link } from 'react-router-dom';
 import { VscChevronLeft } from "react-icons/vsc";
-import './Bmi.css';
+// import './Bmi.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function Bmi_1() {
   return (
@@ -22,14 +22,23 @@ function Bmi_1() {
 
         <div >
           <Link to="/Advice_1">
-            <Button className='advice-button'>คำแนะนำ</Button> {/* Changed button to Ant Design's Button component */}
+            <Button className='advice-button'>คำแนะนำ</Button> 
           </Link>
         
         
-        <Link to="/Advice_1"> {/* Changed the route for the "No" response */}
-            <Button className='next-button'>ถัดไป</Button> {/* Changed button to Ant Design's Button component */}
+        <Link to="/Advice_1"> 
+            <Button className='next-button'>ถัดไป</Button> 
           </Link>
         </div>
+        <div className='chevron-icon'>
+        <Link to="/Bmi">
+        <Button // Changed button to Ant Design's Button component
+          shape="circle"
+          style={{ left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
+          icon={<VscChevronLeft />}
+        />
+      </Link>
+      </div>
       </div>
      
     </div>

@@ -10,6 +10,7 @@
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
       animation: App-logo-spin infinite 20s linear;
+      
     }
   }
   
@@ -64,9 +65,7 @@
    abbr[title] {
     text-decoration: none;
    }
-   /* .react-calendar__month-view__days__day--weekend {
-    color: #d10000;
-   } */
+
    .react-calendar__tile:enabled:hover,
    .react-calendar__tile:enabled:focus {
     background: #f8f8fa;
@@ -126,14 +125,14 @@
     color: white;
    }
    .next-button {
-    display: block; /* สร้างบริเวณเป็น block */
-    margin: 0 auto; /* จัดตำแหน่งตรงกลาง */
+    display: block; 
+    margin: 0 auto; 
   }
   
   .chevron-icon {
     position: absolute;
-    left: 300px; /* ปรับตำแหน่งตามที่คุณต้องการ */
-    top: 10px; /* ปรับตำแหน่งตามที่คุณต้องการ */
+    left: 300px; 
+    top: 10px; 
   }
   
   .chevron-icon button {

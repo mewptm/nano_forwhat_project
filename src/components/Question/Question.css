@@ -1,7 +1,7 @@
-.quiz-card {
+/* .quiz-card {
   padding: 100px;
   background-color: #BCCEFB;
-  /*border: 1px solid #BCCEFB;*/
+
   border-radius: 5px;  
 }
 .wrap {
@@ -72,11 +72,11 @@
   box-shadow: 8px 8px 6px 4px #b2b2b2;
   font-size: larger;
   cursor: pointer;
-  text-align :center; /* Add this line to align text to the left */
+  text-align :center; 
 }
 
 .next-button:hover{
-  background-color: #dcdcdc;/* สีปุ่มเช็คคำตอบตอนชี้*/
+  background-color: #dcdcdc;
   color: #000000;
   box-shadow: 8px 8px 6px 4px #696969;
 }
@@ -91,7 +91,7 @@
   height: 50px;
   border-radius: 50%;
   border: none;
-  background-color: #ffffff; /* เปลี่ยนสีตามที่ต้องการ */
+  background-color: #ffffff; 
   color: #757575;
   display: flex;
   justify-content: center;
@@ -103,7 +103,7 @@
   top: 30px;
 }
 
-/*MEDIA*/
+
 @media screen and (max-width: 1400px) {
   .question {
     padding-top: 30px;
@@ -120,7 +120,7 @@
     width: 30vw !important;
   }
 }
-/* 1200px หรือน้อยกว่า */
+
 @media screen and (max-width: 1200px) {
   .question {
     padding-top: 30px;
@@ -134,7 +134,7 @@
   }
 }
 
-/* 992px หรือน้อยกว่า */
+
 @media screen and (max-width: 992px) {
   .question {
     padding-top: 30px;
@@ -148,7 +148,7 @@
   }
 }
 
-/* 768px หรือน้อยกว่า */
+
 @media screen and (max-width: 768px) {
   .question {
     padding-top: 30px;
@@ -162,7 +162,7 @@
   }
 }
 
-/* 576px หรือน้อยกว่า */
+
 @media screen and (max-width: 576px) {
   .question {
     padding-top: 30px;
@@ -174,4 +174,4 @@
   .next-button {
     width: 30vw !important;
   }
-}
+} */
