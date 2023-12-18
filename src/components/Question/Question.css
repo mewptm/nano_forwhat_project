@@ -67,7 +67,7 @@
   box-shadow: 6px 6px 4px 2px #696969;
 }
 
-.next-button{
+.next{
   display: block;
   width: 100%;
   padding: 20px;
@@ -82,13 +82,13 @@
   text-align :center; 
 }
 
-.next-button:hover{
+.next:hover{
   background-color: #dcdcdc;
   color: #000000;
   box-shadow: 8px 8px 6px 4px #696969;
 }
 
-.next-button:active {
+.next:active {
   box-shadow: none;
   transform: translateY(5px);
 }
@@ -110,7 +110,25 @@
   top: 30px;
 }
 
-
+@media screen and (max-width: 1600px) {
+  .question {
+    padding-top: 30px;
+    font-size: 2rem;
+  }
+  .answer-button{
+    width: 50vw;
+    font-size: 1.8rem;
+    position: relative;
+    left: 25px;
+    width: 40vw !important;
+  }
+  .next{
+    font-size: 1.5rem;
+    width: 30vw !important;
+    position: absolute;
+    left: 135px;
+  }
+}
 
 @media screen and (max-width: 1400px) {
   .question {
@@ -118,27 +136,37 @@
     font-size: 2rem;
   }
   .answer-button{
-    width: 40vw;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50vw;
+    font-size: 1.8rem;
+    position: relative;
+    left: -155px;
+    width: 65vw !important;
   }
-  .next-button{
+  .next{
+    font-size: 1.6rem;
     width: 30vw !important;
+    position: absolute;
+    left: 105px;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .question {
     padding-top: 30px;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   .answer-button{
     width: 50vw;
+    font-size: 1.8rem;
+    position: relative;
+    left: -145px;
+    width: 65vw !important;
   }
-  .next-button{
+  .next{
+    font-size: 1.5rem;
     width: 30vw !important;
+    position: absolute;
+    left: 85px;
   }
 }
 
@@ -150,9 +178,16 @@
   }
   .answer-button {
     width: 50vw;
+    font-size: 1.5rem;
+    position: relative;
+    left: -125px;
+    width: 65vw !important;
   }
-  .next-button {
+  .next {
+    font-size: 1.4rem;
     width: 30vw !important;
+    position: absolute;
+    left: 65px;
   }
 }
 
@@ -164,12 +199,18 @@
   }
   .answer-button {
     width: 40vw;
+    font-size: 1.5rem;
+    position: relative;
+    left: -100px;
+    width: 65vw !important;
   }
-  .next-button {
+  .next {
+    font-size: 1.4rem;
     width: 30vw !important;
+    position: absolute;
+    left: 55px;
   }
 }
-
 
 @media screen and (max-width: 576px) {
   .question {
@@ -177,9 +218,34 @@
     font-size: 1.4rem;
   }
   .answer-button {
+    font-size: 1.2rem;
     width: 40vw;
+    position: relative;
+    left: -95px;
+    width: 65vw !important;
   }
-  .next-button {
+  .next {
+    font-size: 1.2rem;
+    width: 30vw !important;
+    position: absolute;
+    left: 20px;
+  }
+} 
+
+@media screen and (max-width: 450px) {
+  .question {
+    padding-top: 30px;
+    font-size: 1.4rem;
+  }
+  .answer-button {
+    font-size: 1.1rem;
+    width: 40vw;
+    position: relative;
+    left: -90px;
+    width: 65vw !important;
+  }
+  .next {
+    font-size: 1.1rem;
     width: 30vw !important;
   }
 } 
