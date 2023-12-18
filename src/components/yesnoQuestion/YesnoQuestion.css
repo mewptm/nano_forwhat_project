@@ -1,5 +1,11 @@
+.font-family {
+  font-family: 'Noto Sans Thai', sans-serif;
+  /* ส่วนอื่น ๆ ของ CSS ของคุณ */
+}
 
 .yes-button {
+  font-family: 'Noto Sans Thai', sans-serif;
+  font-size: 30px;
   display: block;
   width: 100%; 
   padding: 30px; 
@@ -9,12 +15,13 @@
   color: rgb(13, 13, 13);
   border-radius: 5px;
   box-shadow: 6px 6px 4px 2px #b2b2b2;
-  font-size: larger;
   cursor: pointer;
   text-align :center;
 }
 
 .no-button {
+  font-family: 'Noto Sans Thai', sans-serif;
+  font-size: 30px;
   display: block;
   width: 100%;
   padding: 30px;
@@ -24,7 +31,6 @@
   color: rgb(13, 13, 13);
   border-radius: 5px;
   box-shadow: 6px 6px 4px 2px #b2b2b2;
-  font-size: larger;
   cursor: pointer;
   text-align :center;
 }
@@ -71,6 +77,12 @@
   align-items: center;
 }
 
+.custom-bold {
+  font-weight: bold;
+  /* Other custom styles you want to apply */
+}
+
+
 .highlight {
   background-color: #757575;
   color: rgb(255, 255, 255);
@@ -106,6 +118,7 @@
     text-align: center;
     margin: 20px;
     padding-top: 60px;
+    
   }
   
   .imgmedia {
@@ -141,7 +154,7 @@
     margin: 0 auto;
   }
   .chevron-icon {
-    transform: translateX(-30%);
+    transform: translateX(-15%);
     font-size: 16px;
     width: 10px;
     height: 10px;
@@ -168,7 +181,7 @@
     margin: 0 auto; 
   }
   .chevron-icon {
-    transform: translateX(-35%);
+    transform: translateX(-25%);
     font-size: 16px;
     width: 10px;
     height: 10px;
@@ -195,7 +208,7 @@
     margin: 0 auto; 
   }
   .chevron-icon {
-    transform: translateX(-65%);
+    transform: translateX(-35%);
     font-size: 16px;
     width: 10px;
     height: 10px;
@@ -221,14 +234,14 @@
     margin: 0 auto; 
   }
   .chevron-icon {
-    transform: translateX(-95%);
+    transform: translateX(-85%);
     font-size: 16px;
     width: 10px;
     height: 10px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 0px) {
   .Ynquiztion {
     display: flex;
     font-size: 1rem;
@@ -246,7 +259,7 @@
     margin: 0 auto; 
   }
   .chevron-icon {
-    transform: translateX(-120%);
+    transform: translateX(-55%);
     font-size: 16px;
     width: 10px;
     height: 10px;

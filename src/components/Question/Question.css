@@ -1,4 +1,11 @@
-/* .quiz-card {
+
+.font-family {
+  font-family: 'Noto Sans Thai', sans-serif;
+  /* ส่วนอื่น ๆ ของ CSS ของคุณ */
+
+}
+
+.quiz-card {
   padding: 100px;
   background-color: #BCCEFB;
 
@@ -104,6 +111,7 @@
 }
 
 
+
 @media screen and (max-width: 1400px) {
   .question {
     padding-top: 30px;
@@ -174,4 +182,4 @@
   .next-button {
     width: 30vw !important;
   }
-} */
+} 

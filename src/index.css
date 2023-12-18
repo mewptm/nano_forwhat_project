@@ -15,6 +15,15 @@ body {
   background-image: url('/img/nano.jpg');
   background-repeat: no-repeat;
   background-position: center;
-
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
- 
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+

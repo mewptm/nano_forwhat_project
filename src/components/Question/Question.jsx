@@ -6,7 +6,7 @@ import Choice from '../Choice/Choice';
 import './Question.css';
 import Ynquiz1 from '../yesnoQuestion/Ynquiz1';
 import Choice2 from '../Choice/choice2';
-import { useMediaQuery } from 'react-responsive';
+
 
 
 const Question = () => {
@@ -112,19 +112,24 @@ const Question = () => {
 
 	const handleNextQuestion = () => {
 		const isCorrect = selectedOption === questions[currentQuestion].answer;
+	  
 		if (isCorrect) {
-			setScore(score + 1);
+		  setScore(score + 1);
 		}
-
+	  
 		const nextQuestion = currentQuestion + 1;
-		if (nextQuestion < questions.length) {
-			setCurrentQuestion(nextQuestion);
-			setSelectedOption('');
-			removeHighlight();
+		
+		if (questions[currentQuestion].id === 11) {
+		  setShowScore(true); // หยุดแสดงคำถามเมื่อถึง ID 11
+		} else if (nextQuestion < questions.length) {
+		  setCurrentQuestion(nextQuestion);
+		  setSelectedOption('');
+		  removeHighlight();
 		} else {
-			setShowScore(true);
+		  setShowScore(true);
 		}
-	};
+	  };
+	  
 
 	function highlightButton(button) {
 		const buttons = document.getElementsByTagName('button');
@@ -149,67 +154,73 @@ const Question = () => {
 
 
 	return (
-			<div className='wrapper'> 
-		  <Content style={{ padding: '0 50px' }}>
-			<Col span={12} offset={6}>
+		  <div className='wrapper'> 
+			<Content style={{ padding: '0 50px' }}>
+			  <Col span={12} offset={6}>
 				<Col span={24} style={{ textAlign: 'center' }}>
-					<Col >
-						{currentQuestion > 0 && (
-							<button
-								className='circular-button' // ปุ่มย้อนกลับ
-								onClick={handlePreviousQuestion}
-							>
-								&lt;
-							</button>
-						)}
-					</Col>
-					{showScore ? (
-						<Row>
-							<Col >
-								<div className='question'>
-									<Ynquiz1 />
-								</div>
-							</Col>
-						</Row>
-					) : (
-						<div >
-							<div >
-								<div className='question'>
-									<h2>Question {currentQuestion + 1}</h2>
-									<p>{questions[currentQuestion].question}</p>
-								</div>
-							</div>
-							<Col span={24} >
-								<div className='answer'>
-  									{questions[currentQuestion].options.map((option, index) => (
-    								<div key={index}>
-      									<button
-        								type="button"
-        								className={`answer-button ${selectedOption === option ? 'highlight' : ''}`}
-        								onClick={(event) => handleOptionSelect(event, option)}
-       									style={{ margin: '25px' }}
-      								>
-        								{option}
-      									</button>
-    									</div>
-  										))}
-										</div>
-								<div> 
-									<button className='next-button'
-										onClick={handleNextQuestion}
-										disabled={!selectedOption}
-									>
-										หน้าถัดไป
-									</button>
-								</div>
-							</Col>
-						</div>
+				  <Col >
+					{currentQuestion > 0 && (
+					  <button
+						className='circular-button' // ปุ่มย้อนกลับ
+						onClick={handlePreviousQuestion}
+					  >
+						&lt;
+					  </button>
 					)}
+				  </Col>
+				  {showScore ? (
+					<Row>
+					  <Col>
+						<div className='question'>
+							<Ynquiz1 />
+						</div>
+					  </Col>
+					</Row>
+				  ) : (
+					<div>
+					  <div>
+						<div className='question'>
+						<div className='font-family'>
+						  <h1>Question {currentQuestion + 1}</h1>
+						  <p>{questions[currentQuestion].question}</p>
+						</div>
+						</div>
+					  </div>
+					  <Col span={24}>
+						<div className='answer'>
+						<div className='font-family'>
+						  {questions[currentQuestion].options.map((option, index) => (
+							<div key={index}>
+							  <button
+								type="button"
+								className={`answer-button ${selectedOption === option ? 'highlight' : ''}`}
+								onClick={(event) => handleOptionSelect(event, option)}
+								style={{ margin: '35px', fontWeight: 900}}
+							  >
+								{option}
+							  </button>
+							</div>
+						  ))}
+						  </div>
+						</div>
+						<div className='font-family'> 
+						  <button 
+							className='next'
+							onClick={handleNextQuestion}
+							disabled={!selectedOption}
+							style={{ fontWeight: 900 }}
+						  >
+							หน้าถัดไป
+						  </button>
+						</div>
+					  </Col>
+					</div>
+				  )}
 				</Col>
-			</Col>
-		</Content>
-	</div>
-	);
+			  </Col>
+			</Content>
+		  </div>
+	  );	  
 };
 
 export default Question;

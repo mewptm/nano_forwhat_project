@@ -57,7 +57,7 @@ const Choice = () => (
     <Select
     mode="multiple"
     style={{ width: '100%' }}
-    placeholder="select your answer"
+    placeholder="กรุณาเลือกคำตอบต่อไปนี้ "
 
     onChange={handleChange}
     optionLabelProp="label"

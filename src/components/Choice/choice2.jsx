@@ -120,7 +120,7 @@ const Choice2 = () => (
     <Select
     mode="multiple"
     style={{ width: '100%' }}
-    placeholder="select your answer"
+    placeholder="กรุณาเลือกคำตอบต่อไปนี้"
 
     onChange={handleChange}
     optionLabelProp="label"
@@ -129,7 +129,6 @@ const Choice2 = () => (
 );
 
 
-      
-
+    
 
 export default Choice2;

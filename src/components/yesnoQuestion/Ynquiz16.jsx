@@ -4,24 +4,30 @@ import { Link } from 'react-router-dom';
 import { VscChevronLeft } from "react-icons/vsc";
 import './YesnoQuestion.css';
 
+
+const boldStyle = {
+  fontWeight: 900, // ค่าที่สามารถกำหนดได้คือ 100-900 
+};
+
+
 function Ynquiz16() {
   return (
-    <div>
+    <div className='font-family'>
       <div className='Ynquiztion'>
-        <h2> พฤติกรรมของคุณในช่วงระหว่างวันคือ </h2> 
-        <h2> ลุกหรือเดินเพื่อยืดเส้นสายเกือบทั้งวัน </h2>
-        <Image
+        <h1 style={boldStyle}> พฤติกรรมของคุณในช่วงระหว่างวันคือ </h1> 
+        <h1 style={boldStyle}> ลุกหรือเดินเพื่อยืดเส้นสายเกือบทั้งวัน </h1>
+        <Image className='imgmedia'
           width={500}
           height={500}
           src="/img/yn16.jpg"
         /><br />
         <div className="button-container">
           <Link to="/yesno_17">
-            <Button className='yes-button'>ไม่</Button> {/* Changed button to Ant Design's Button component */}
+          <Button className='no-button' style={{ fontWeight: 900 }}>ไม่</Button>
           </Link>
-          <h4>&nbsp; &nbsp; &nbsp; หรือ &nbsp; &nbsp; &nbsp;</h4>
+          <h1 style={boldStyle} >&nbsp; &nbsp; &nbsp; หรือ &nbsp; &nbsp; &nbsp;</h1>
           <Link to="/yesno_17"> {/* Changed the route for the "No" response */}
-            <Button className='no-button'>ใช่</Button> {/* Changed button to Ant Design's Button component */}
+          <Button className='yes-button' style={{ fontWeight: 900 }}>ใช่</Button>
           </Link>
         </div>
       </div>
@@ -29,7 +35,7 @@ function Ynquiz16() {
       <Link to="/yesno_15">
         <Button // Changed button to Ant Design's Button component
           shape="circle"
-          style={{ left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
+          style={{ left: 10, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
           icon={<VscChevronLeft />}
         />
       </Link>
