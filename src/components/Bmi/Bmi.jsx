@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import '../Bmi/Bmi.css'
+// import '../Bmi/Bmi.css'
+import { Button } from 'antd';
+import { Link } from 'react-router-dom';
+import { VscChevronLeft } from "react-icons/vsc";
 import Weight from './Weight';
 import Height from './Height';
 import Bmi_1 from './Bmi_1';
@@ -7,6 +10,7 @@ import Bmi_2 from './Bmi_2';
 import Bmi_3 from './Bmi_3';
 import Bmi_4 from './Bmi_4';
 import Bmi_5 from './Bmi_5';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Bmi(props) {
   const [weight, setWeight] = useState(0);
@@ -49,7 +53,14 @@ function Bmi(props) {
       case 5:
         return <Bmi_5 bmiValue={bmiValue} />;
       default:
-        return null;
+        return (
+          <div>
+            <Weight onWeightChange={(value) => setWeight(value)} />
+            <br/>
+            <Height onHeightChange={(value) => setHeight(value)} />
+            <button className='bmi-button' onClick={calculateBmi}>คำนวณ BMI</button>
+          </div>
+        );
     }
   };
   
@@ -58,16 +69,30 @@ function Bmi(props) {
       return <RenderBmiComponent bmiValue={bmi.toFixed(1)} />;
     } else {
       return (
+      
         <div>
+          <div className='font-family'>
           <Weight onWeightChange={(value) => setWeight(value)} />
           <br />
           <Height onHeightChange={(value) => setHeight(value)} />
-          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           <button className='bmi-button' onClick={calculateBmi}>คำนวณ BMI</button>
+          </div>
+          <div className='chevron-icon'>
+          <Link to="/Target">
+          <Button // Changed button to Ant Design's Button component
+          shape="circle"
+          style={{ left: 100, top: 10, fontSize:'20px', width: '50px', height: '50px'  }}
+          icon={<VscChevronLeft />}
+        />
+      </Link>
+      </div>
+          
         </div>
-        /* setWeight = ตัวกรอกน้ำหนัก , setHeight = ตัวกรอกส่วนสูง */
+        
       );
+      
     }
+    
   };
   
 
@@ -89,6 +114,7 @@ function Bmi(props) {
   
 
   return <div>{renderContent()}</div>;
+  
 }
 
 export default Bmi;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Image, Button } from 'antd'; // Import Button component from Ant Design
 import { Link } from 'react-router-dom';
 import { VscChevronLeft } from "react-icons/vsc";
-import './Bmi.css';
+// import './Bmi.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Weight_1(props) {
@@ -19,7 +19,7 @@ function Weight_1(props) {
   };
 
   return (
-    <div className='Bmi1'>
+    <div className='Bmi1 '>
       <h2>น้ำหนักของคุณเท่าไหร่</h2>
 
       <div class="input-label">
@@ -28,36 +28,26 @@ function Weight_1(props) {
       </div>
       <br />
       <p>โปรดป้อนค่าตั้งต้นตั้งแต่ 35 กิโลกรัม ถึง 200 กิโลกรัม</p>
-      <br />
+      
       <Image
           width={300}
           height={300}
-          src="/img/10.jpg"
+          src="/img/w1.jpg"
         />
         <div>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+        
         <Link to="/Height_1">
             <Button className='next-button'>ถัดไป</Button>
           </Link>
         </div>
         <div className='chevron-icon'>
-      <Link to="/Calendar_1">
-        <Button // Changed button to Ant Design's Button component
+          <Link to="/Calendar_1">
+          <Button // Changed button to Ant Design's Button component
           shape="circle"
-          style={{ position: 'absolute', left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
+          style={{ left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
           icon={<VscChevronLeft />}
         />
       </Link>
-
       </div>
     </div>
     

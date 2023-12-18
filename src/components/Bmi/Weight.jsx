@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 function Weight(props) {
   const [weight, setweight] = useState();
 
@@ -19,6 +18,7 @@ function Weight(props) {
   };
 
   return (
+    
     <div className='Bmi1'>
       <h2>คำนวณค่าดัชนีมวลกาย (BMI)</h2>
       <br/><br/>
@@ -31,7 +31,9 @@ function Weight(props) {
       />
      
     </div>
+    
   );
+  
 }
 
 export default Weight;

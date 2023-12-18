@@ -7,8 +7,8 @@
   font-family: 'Noto Sans Thai', sans-serif;
   font-size: 30px;
   display: block;
-  width: 100%; /*ความกว้าง*/
-  padding: 30px; /*ขนาดปุ่ม*/
+  width: 100%; 
+  padding: 30px; 
   margin-bottom: 25px;
   background-color: #FFFF;
   border: 1px solid hsl(0, 0%, 80%);
@@ -43,7 +43,7 @@
 }
 
 .no-button:hover{
-  background-color: #757575;/* สีปุ่มเช็คคำตอบตอนชี้*/
+  background-color: #757575;
   color: #FFFF;
   box-shadow: 0 4px 0 0 #b2b2b2;
 }
@@ -54,7 +54,7 @@
 }
 
 .yes-button:hover{
-  background-color: #757575;/* สีปุ่มเช็คคำตอบตอนชี้*/
+  background-color: #757575;
   color: #FFFF;
   box-shadow: 0 4px 0 0 #b2b2b2;
 }
@@ -109,7 +109,6 @@
 }
 
 
-/* 1400px หรือน้อยกว่า */
 @media screen and (max-width: 1400px) {
   .Ynquiztion {
     display: flex;
@@ -126,7 +125,7 @@
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* จัดตรงกลางในกรณีของรูปภาพ */
+    margin: 0 auto; 
   }
   .chevron-icon {
     transform: translateX(-15%);
@@ -136,7 +135,7 @@
   }
 }
 
-/* 1200px หรือน้อยกว่า */
+
 @media screen and (max-width: 1200px) {
   .Ynquiztion {
     display: flex;
@@ -152,7 +151,7 @@
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* จัดตรงกลางในกรณีของรูปภาพ */
+    margin: 0 auto;
   }
   .chevron-icon {
     transform: translateX(-15%);
@@ -162,7 +161,7 @@
   }
 }
 
-/* 992px หรือน้อยกว่า */
+
 @media screen and (max-width: 992px) {
 
   .Ynquiztion {
@@ -179,7 +178,7 @@
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* จัดตรงกลางในกรณีของรูปภาพ */
+    margin: 0 auto; 
   }
   .chevron-icon {
     transform: translateX(-25%);
@@ -189,7 +188,7 @@
   }
 }
 
-/* 768px หรือน้อยกว่า */
+
 @media screen and (max-width: 768px) {
 
   .Ynquiztion {
@@ -206,7 +205,7 @@
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* จัดตรงกลางในกรณีของรูปภาพ */
+    margin: 0 auto; 
   }
   .chevron-icon {
     transform: translateX(-35%);
@@ -216,7 +215,7 @@
   }
 }
 
-/* 576px หรือน้อยกว่า */
+
 @media screen and (max-width: 576px) {
   .Ynquiztion {
     display: flex;
@@ -232,7 +231,7 @@
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* จัดตรงกลางในกรณีของรูปภาพ */
+    margin: 0 auto; 
   }
   .chevron-icon {
     transform: translateX(-85%);
@@ -257,7 +256,7 @@
     width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* จัดตรงกลางในกรณีของรูปภาพ */
+    margin: 0 auto; 
   }
   .chevron-icon {
     transform: translateX(-55%);

@@ -1,3 +1,4 @@
+
 .font-family {
   font-family: 'Noto Sans Thai', sans-serif;
   /* ส่วนอื่น ๆ ของ CSS ของคุณ */
@@ -7,20 +8,17 @@
 .quiz-card {
   padding: 100px;
   background-color: #BCCEFB;
-  /*border: 1px solid #BCCEFB;*/
+
   border-radius: 5px;  
 }
-
 .wrap {
   align-items: normal!important;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap!important
 }
-
 .question {
-  padding-top: 40px;
-  font-size: 30px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -45,10 +43,11 @@
   border: 1px solid #ccc;
   color: rgb(13, 13, 13);
   border-radius: 5px;
-  box-shadow: 8px 8px 6px 4px #b2b2b2;
+  box-shadow: 6px 6px 4px 2px #b2b2b2;
   font-size: larger;
   cursor: pointer;
   text-align :center;
+  
 }
 
 .answer-button:active{
@@ -65,36 +64,32 @@
 .highlight {
   background-color: #757575;
   color: rgb(255, 255, 255);
-  box-shadow: 8px 8px 6px 4px #b2b2b2;
+  box-shadow: 6px 6px 4px 2px #696969;
 }
 
-.next {
+.next-button{
   display: block;
-  width: 50%;
+  width: 100%;
   padding: 20px;
-  margin: 0 auto ; /* ปรับให้กำหนด margin เป็น 0 auto เพื่อให้ตัวปุ่มอยู่ตรงกลาง */
+  margin-bottom: 12px;
   background-color: #FFFF;
   border: 1px solid #ccc;
   color: rgb(13, 13, 13);
   border-radius: 5px;
   box-shadow: 8px 8px 6px 4px #b2b2b2;
-  font-size: large;
+  font-size: larger;
   cursor: pointer;
-  text-align: center;
-  transform: translateX(5%);
-
-  
-  justify-content: center;
+  text-align :center; 
 }
 
-.next:hover {
-  background-color: #757575;
-  color: rgb(255, 255, 255);
-  box-shadow: 8px 8px 6px 4px #b2b2b2;
+.next-button:hover{
+  background-color: #dcdcdc;
+  color: #000000;
+  box-shadow: 8px 8px 6px 4px #696969;
 }
 
-.next:active {
-  box-shadow: 8px 8px 6px 4px #b2b2b2;
+.next-button:active {
+  box-shadow: none;
   transform: translateY(5px);
 }
 
@@ -103,7 +98,7 @@
   height: 50px;
   border-radius: 50%;
   border: none;
-  background-color: #ffffff; /* เปลี่ยนสีตามที่ต้องการ */
+  background-color: #ffffff; 
   color: #757575;
   display: flex;
   justify-content: center;
@@ -115,24 +110,25 @@
   top: 30px;
 }
 
-/*MEDIA*/
+
+
 @media screen and (max-width: 1400px) {
   .question {
     padding-top: 30px;
     font-size: 2rem;
   }
   .answer-button{
-    width: 50vw;
+    width: 40vw;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .next-button{
-    width: 35vw !important;
+    width: 30vw !important;
   }
 }
-/* 1200px หรือน้อยกว่า */
+
 @media screen and (max-width: 1200px) {
   .question {
     padding-top: 30px;
@@ -140,14 +136,13 @@
   }
   .answer-button{
     width: 50vw;
-    
   }
   .next-button{
-    width: 35vw !important;
+    width: 30vw !important;
   }
 }
 
-/* 992px หรือน้อยกว่า */
+
 @media screen and (max-width: 992px) {
   .question {
     padding-top: 30px;
@@ -157,55 +152,34 @@
     width: 50vw;
   }
   .next-button {
-    width: 35vw !important;
+    width: 30vw !important;
   }
 }
 
-/* 768px หรือน้อยกว่า */
+
 @media screen and (max-width: 768px) {
   .question {
     padding-top: 30px;
     font-size: 1.5rem;
   }
   .answer-button {
-    width: 55vw;
-    position: relative;
-    left: -95px;
+    width: 40vw;
   }
   .next-button {
-    width: 35vw !important;
-    position: absolute;
-    left: -50;
+    width: 30vw !important;
   }
 }
 
-/* 576px หรือน้อยกว่า */
+
 @media screen and (max-width: 576px) {
   .question {
     padding-top: 30px;
     font-size: 1.4rem;
   }
   .answer-button {
-    width: 69vw;
-
+    width: 40vw;
   }
   .next-button {
-    width: 40vw !important;
+    width: 30vw !important;
   }
-}
-
-@media screen and (max-width: 530px) {
-  .question {
-    padding-top: 30px;
-    font-size: 1.4rem;
-  }
-  .answer-button {
-    width: 67vw;
-    font-size: 1.2rem;
-  }
-  .next {
-    width: 40vw !important;
-    font-size: 1.2rem;
-  }
-
-}
+} 

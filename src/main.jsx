@@ -55,6 +55,7 @@ import Bmi from './components/Bmi/Bmi.jsx';
 import Height_1 from './components/Bmi/Height_1.jsx';
 import Weight_1 from './components/Bmi/Weight_1.jsx';
 import Calendar_1 from './components/Calendar/Calendar_1.jsx';
+import Name from './components/Bmi/name.jsx';
 
 
 const router = createBrowserRouter([
@@ -249,6 +250,10 @@ const router = createBrowserRouter([
   {
     path: "/Calendar_1",
     element: <Calendar_1/>,
+  },
+  {
+    path: "/Name",
+    element: <Name/>,
   },
 
   ]);
