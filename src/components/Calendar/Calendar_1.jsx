@@ -31,8 +31,8 @@ function Calendar_1() {
         <div className="calendar-container">
           <Calendar onChange={handleDateChange} value={date} />
         </div>
-        <p className="text-center">
-          <span className="bold">กรุณาเลือกวันที่ </span> {date.toDateString()}
+        <p className="text-center"> <br/>
+          <span className="bold">วันที่เลือก</span> {date.toDateString()}
         </p>
       </header>
       <br />

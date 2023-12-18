@@ -9,94 +9,14 @@ body {
   background-image: url('/img/nano.jpg');
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.quiz-card {
-  padding: 100px;
-  background-color: #BCCEFB;
-  /*border: 1px solid #BCCEFB;*/
-  border-radius: 5px;  
-}
-
-.question {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.question-text {
-  font-size: 16px;
-  margin-bottom: 20px;
-  font-size: larger;
-}
-
-.answer {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.answer-button {
-  display: block;
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 12px;
-  background-color: #FFFF;
-  border: 1px solid #ccc;
-  color: rgb(13, 13, 13);
-  border-radius: 5px;
-  box-shadow: 3px 3px 2px 1px #b2b2b2;
-  font-size: larger;
-  cursor: pointer;
-  text-align :center; /* Add this line to align text to the left */
-  position: relative;
-  
-}
-
-.answer-button:active{
-  background-color: #b61f1f;
-  transform: translateY(5px);
-  outline: none;
-}
-
-
-.next-button{
-  display: block;
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 12px;
-  background-color: #FFFF;
-  border: 1px solid #ccc;
-  color: rgb(13, 13, 13);
-  border-radius: 5px;
-  box-shadow: 3px 3px 2px 1px #b2b2b2;
-  font-size: larger;
-  cursor: pointer;
-  text-align :center; /* Add this line to align text to the left */
-}
-
-.next-button:active {
-  box-shadow: none;
-  transform: translateY(5px);
-}
-
-.list-drop {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  background-color: #fff;
-}
-
-.Option{
-  font-size: 50px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-
 
