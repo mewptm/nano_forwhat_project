@@ -128,6 +128,11 @@
     position: absolute;
     left: 135px;
   }
+  .chevron-icon {
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -148,6 +153,11 @@
     position: absolute;
     left: 105px;
   }
+  .chevron-icon {
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -167,6 +177,11 @@
     width: 30vw !important;
     position: absolute;
     left: 85px;
+  }
+  .chevron-icon {
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -189,6 +204,11 @@
     position: absolute;
     left: 65px;
   }
+  .chevron-icon {
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+  }
 }
 
 
@@ -210,6 +230,11 @@
     position: absolute;
     left: 55px;
   }
+  .chevron-icon {
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -230,6 +255,11 @@
     position: absolute;
     left: 20px;
   }
+  .chevron-icon {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+  }
 } 
 
 @media screen and (max-width: 450px) {
@@ -247,5 +277,10 @@
   .next {
     font-size: 1.1rem;
     width: 30vw !important;
+  }
+  .chevron-icon {
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
   }
 } 
