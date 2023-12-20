@@ -4,7 +4,6 @@ import { Row, Col} from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Choice from '../Choice/Choice';
 import './Question.css';
-import Ynquiz1 from '../yesnoQuestion/Ynquiz1';
 import Choice2 from '../Choice/choice2';
 
 
@@ -172,7 +171,7 @@ const Question = () => {
 					<Row>
 					  <Col>
 						<div className='question'>
-							<Ynquiz1 />
+							
 						</div>
 					  </Col>
 					</Row>
