@@ -8,7 +8,7 @@
   line-height: 1.5;
   display: block;
   width: 100%;
-  max-width: 250px;
+  max-width: 210px;
   padding: 15px;
   position: relative;
   background-color: #FFFF;
@@ -30,10 +30,10 @@
   line-height: 1.5;
   display: block;
   width: 250px;
-  max-width: 250px;
-  padding: 10px;
+  max-width: 210px;
+  padding: 1px;
   position: relative; 
-  top: 100px; 
+  top: 25px; 
   margin-bottom: 55px;
   background-color: #FFFF;
   border: 1px solid #ccc;
@@ -53,8 +53,8 @@
   line-height: 1.5;
   display: block;
   width: 100%;
-  max-width: 250px;
-  padding: 15px;
+  max-width: 210px;
+  padding: 1px;
   margin-bottom: 25px;
   background-color: #FFFF;
   border: 1px solid #ccc;
@@ -125,17 +125,7 @@
   margin: 0 auto;
 }
 
-.chevronicon {
-  left: 100px;
-  top: 10px; 
-  font-size:22px; 
-  width: 100%; 
-  height: 50%;
-  display: block;
-  justify-content: left;
-  text-align: left;
 
-}
 
 
 
@@ -163,16 +153,17 @@
     background-color: #FFFF;
     color: rgb(13, 13, 13);
     border-radius: 5px;
-    box-shadow: 3px 3px 2px 1px #b2b2b2;
+    box-shadow: 1px 1px 1px 1px #b2b2b2;
     padding: 10px;
     margin: 5px auto; 
     width: 60%; 
     text-align: left; 
   }
   
-  input,
-  label {
+  .label {
     display: inline-block;
+   
+
   }
   
 
@@ -186,7 +177,7 @@
     line-height: 1.5;
     display: block;
     width: 100%;
-    max-width: 250px;
+    max-width: 210px;
     padding: 15px;
     position: relative; 
     top: 100px; 
@@ -213,15 +204,14 @@
 
   }
   input {
-    margin: 0 auto;
+   
     justify-content: center;
     align-items: center;
-    padding: 16px;
+    padding: 10px;
     width: calc(100% );
-    max-width: 250px;
+    max-width: 210px;
     box-sizing: border-box;
     border-radius: 8px;
-    margin: 1em auto;
     margin-bottom: 1em;
     font-size: 1rem;
     background-color: #fff;
@@ -232,13 +222,12 @@
   }
 
   .gender select {
-    
+   
     width: calc(100% );
-    max-width: 250px;
+    max-width: 210px;
     height: 60px;
     box-sizing: border-box;
     border-radius: 8px;
-    margin: 1em auto;
     margin-bottom: 1em;
     font-size: 1rem;
     background-color: #fff;
@@ -266,6 +255,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 1em;
         
       }
       .chevronicon {
@@ -297,6 +287,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 1em;
       }
       .chevronicon {
         transform: translateX(-2000%);
@@ -327,6 +318,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 1em;
       }
       .chevronicon {
         transform: translateX(-3000%);
@@ -357,6 +349,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 1em;
       }
       .chevronicon {
         transform: translateX(-3500%);
@@ -384,6 +377,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 1em;
         }
         .chevronicon {
           transform: translateX(-3950%);

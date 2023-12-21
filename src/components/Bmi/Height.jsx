@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import styles from'./Bmi.module.css';
 function Height(props) {
   const [height, setHeight] = useState();
 
@@ -14,7 +14,7 @@ function Height(props) {
   };
 
   return (
-    <div className='Bmi1'>
+    <div className={styles.Bmi1}>
       <h2>ส่วนสูง (ซม.)</h2>
       <input
         type="number"

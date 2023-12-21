@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Image, Button } from 'antd';
 import { Link } from 'react-router-dom';
 import { VscChevronLeft } from "react-icons/vsc";
-import styles from'./Bmi.module.css'
+import styles from'./Bmi.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Name() {
@@ -21,10 +21,12 @@ function Name() {
           <div className={styles.input}>
             <input type="text" placeholder="ชื่อ" />
           </div>
+          
 
           <div className={styles.input} >
             <input type="text" placeholder="นามสกุล" />
           </div>
+         
 
           <div className={styles.input}>
             <input type="number" placeholder="อายุ" />
@@ -41,12 +43,12 @@ function Name() {
         </div>
 
         <div>
-          <Link to="/Bmi">
+          <Link to="/Question">
             <button className={styles.nextbutton}>ถัดไป</button>
           </Link>
         </div>
         <div className='chevron-icon'>
-          <Link to="/Height_1">
+          <Link to="/">
             <Button
               shape="circle"
               style={{right:270 , top: 10, fontSize: '22px', width: '50px', height: '50px' }}

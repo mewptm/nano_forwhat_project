@@ -2,6 +2,7 @@ import React from 'react';
 import Calendar from 'react-calendar';
 import { useState } from 'react';
 import './calendar.css'
+import styles from '../Bmi/Bmi.module.css';
 import 'react-calendar/dist/Calendar.css';
 import { useNavigate } from 'react-router-dom'
 import { Image, Button } from 'antd'; // Import Button component from Ant Design
@@ -26,7 +27,7 @@ function Calendar_1() {
   return (
     <div className="App">
       <header className="Calendar">
-        <h1 className='text-center'>วัน/เดือน/ปีเกิด</h1>
+        <h1 className={styles.Bmi1}>วัน/เดือน/ปีเกิด</h1>
         <br/>
         <div className='calendar-container'>
           <Calendar onChange={handleDateChange} value={date} />
@@ -38,14 +39,14 @@ function Calendar_1() {
       <br/>
       <div>
       <Link to="/Weight_1"> {/* Changed the route for the "No" response */}
-            <Button className='next-button'>ถัดไป</Button> {/* Changed button to Ant Design's Button component */}
+      <button className={styles.nextbutton}>ถัดไป</button>
           </Link>
       </div>
       <div className='chevron-icon'>
           <Link to="/yesno_30">
           <Button // Changed button to Ant Design's Button component
           shape="circle"
-          style={{ left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
+          style={{right:270 , top: 10, fontSize: '22px', width: '50px', height: '50px' }}
           icon={<VscChevronLeft />}
         />
       </Link>

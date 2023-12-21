@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Image, Button } from 'antd'; // Import Button component from Ant Design
 import { Link } from 'react-router-dom';
 import { VscChevronLeft } from "react-icons/vsc";
-// import './Bmi.css';
+import styles from'./Bmi.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function Height_1(props) {
   const [height, setHeight] = useState();
@@ -18,13 +18,13 @@ function Height_1(props) {
   };
 
   return (
-    <div className='font-family'>
-    <div className='Bmi1 '>
+    
+    <div className={styles.Bmi1}>
       <h2 style={{ fontWeight: 'bold' }}>ส่วนสูงของคุณเท่าไหร่</h2>
 
-      <div class="input-label">
+      <div class={styles.label}>
       <input type="number"  onChange={handleInputChange} />
-      <label htmlFor="height"><h3 style={{ fontWeight: 'bold' }}>ซม.</h3></label>
+      <label htmlFor="height"><h3 style={{ fontWeight: 'bold' }}>&nbsp;&nbsp;ซม.</h3></label>
       </div>
       <br />
       <p>โปรดป้อนค่าตั้งต้นตั้งแต่ 100 ซม. ถึง 250 ซม.</p>
@@ -36,20 +36,20 @@ function Height_1(props) {
         />
         <div>
         <Link to="/Target"> {/* Changed the route for the "No" response */}
-            <Button className='next-button , font-family'>ถัดไป</Button> {/* Changed button to Ant Design's Button component */}
+            <button className={styles.nextbutton} >ถัดไป</button> {/* Changed button to Ant Design's Button component */}
           </Link>
         </div>
         <div className='chevron-icon'>
           <Link to="/Weight_1">
           <Button // Changed button to Ant Design's Button component
           shape="circle"
-          style={{ left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
+          style={{right:270 , top: 10, fontSize: '22px', width: '50px', height: '50px' }}
           icon={<VscChevronLeft />}
         />
       </Link>
       </div>
     </div>
-    </div>
+    
   );
 }
 

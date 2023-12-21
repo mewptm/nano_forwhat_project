@@ -2,16 +2,16 @@ import React from 'react'
 import { Image, Button } from 'antd'; // Import Button component from Ant Design
 import { Link } from 'react-router-dom';
 import { VscChevronLeft } from "react-icons/vsc";
-// import './Bmi.css';
+import styles from'./Bmi.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function Advice_5() {
   return (
     <div>
-        <div className='Bmi1'>
+        <div className={styles.Bmi1}>
         <h2> คำแนะนำค่าดัชนีมวลกาย (BMI) </h2>
         
         <br />
-        <div className='child-advice'>
+        <div className={styles.childadvice}>
         <p>1. รับประทานอาหารในปริมาณที่เหมาะสม และหลีกเลี่ยงการบริโภคอาหารใน ปริมาณมากเกินไป</p>
         <p>2. ลดการบริโภคอาหารที่มีความสูงใน โปรตีนที่ไม่ดีเช่นอาหารหมักหรืออาหาร จางๆ และหลีกเลี่ยงอาหารหรือเครื่องดื่ม ที่มีความสูงในน้ำตาลและไขมัน</p>
         <p>3. ระบุเป้าหมายการลดน้ำหนักหรือควบคุมน้ำหนัก เพื่อลดความเสี่ยงต่อโรคร้าย ต่างๆ ควรทำการลดน้ำหนักอย่าง ช้าๆ และด้วยวิธีที่ยั่งยืน</p>
@@ -21,7 +21,7 @@ function Advice_5() {
 
         <div >
           <Link to="/Bmi_5">
-            <Button className='back-button'>ย้อนกลับ</Button> {/* Changed button to Ant Design's Button component */}
+          <button className={styles.backbutton}>ย้อนกลับ</button> 
           </Link>
         </div>
       </div>
@@ -29,7 +29,7 @@ function Advice_5() {
         <Link to="/Bmi_5">
         <Button // Changed button to Ant Design's Button component
           shape="circle"
-          style={{ left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
+          style={{right:270 , top: 10, fontSize: '22px', width: '50px', height: '50px' }}
           icon={<VscChevronLeft />}
         />
       </Link>

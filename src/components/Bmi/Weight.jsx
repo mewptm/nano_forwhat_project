@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from'./Bmi.module.css';
 function Weight(props) {
   const [weight, setweight] = useState();
 
@@ -19,7 +20,7 @@ function Weight(props) {
 
   return (
     
-    <div className='Bmi1'>
+    <div className={styles.Bmi1}>
       <h2>คำนวณค่าดัชนีมวลกาย (BMI)</h2>
       <br/><br/>
 

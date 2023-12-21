@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
 import { VscChevronLeft } from "react-icons/vsc";
+import styles from'./Bmi.module.css'
 import Weight from './Weight';
 import Height from './Height';
 import Bmi_1 from './Bmi_1';
@@ -58,7 +59,7 @@ function Bmi(props) {
             <Weight onWeightChange={(value) => setWeight(value)} />
             <br/>
             <Height onHeightChange={(value) => setHeight(value)} />
-            <button className='bmi-button' onClick={calculateBmi}>คำนวณ BMI</button>
+            <button className={styles.bmibutton} onClick={calculateBmi}>คำนวณ BMI</button>
           </div>
         );
     }
@@ -71,21 +72,21 @@ function Bmi(props) {
       return (
       
         <div>
-          <div className='font-family'>
+          
           <Weight onWeightChange={(value) => setWeight(value)} />
           <br />
           <Height onHeightChange={(value) => setHeight(value)} />
-          <button className='bmi-button' onClick={calculateBmi}>คำนวณ BMI</button>
-          </div>
+          <button className={styles.bmibutton} onClick={calculateBmi}>คำนวณ BMI</button>
+         
           <div className='chevron-icon'>
           <Link to="/Target">
-          <Button // Changed button to Ant Design's Button component
-          shape="circle"
-          style={{ left: 100, top: 10, fontSize:'20px', width: '50px', height: '50px'  }}
-          icon={<VscChevronLeft />}
-        />
-      </Link>
-      </div>
+            <Button
+              shape="circle"
+              style={{right:285 , top: 10, fontSize: '22px', width: '50px', height: '50px' }}
+              icon={<VscChevronLeft />}
+            />
+          </Link>
+        </div>
           
         </div>
         
