@@ -1,10 +1,10 @@
-
 import React, { useState } from 'react';
 import { Row, Col} from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Choice from '../Choice/Choice';
 import './Question.css';
 import Choice2 from '../Choice/choice2';
+import Yesno from '../Ynquiz/Yesno';
 
 
 
@@ -111,19 +111,25 @@ const Question = () => {
 
 	const handleNextQuestion = () => {
 		const isCorrect = selectedOption === questions[currentQuestion].answer;
-	  
+		
 		if (isCorrect) {
 		  setScore(score + 1);
 		}
-	  
+		
 		const nextQuestion = currentQuestion + 1;
 		
 		if (questions[currentQuestion].id === 11) {
 		  setShowScore(true); // หยุดแสดงคำถามเมื่อถึง ID 11
+		  // Redirect to YesNo component when reaching ID 11
+		  // You can use react-router-dom or any navigation method here
+		 
+			window.location.href = '/Yesno'; // Assuming 'history' is available in your component
+		
 		} else if (nextQuestion < questions.length) {
 		  setCurrentQuestion(nextQuestion);
 		  setSelectedOption('');
 		  removeHighlight();
+		  setShowScore(false); // Set to false to show questions again if navigating back
 		} else {
 		  setShowScore(true);
 		}
@@ -151,6 +157,10 @@ const Question = () => {
 		}
 	};
 
+	const buttonStyle = {
+		fontWeight: 900, // แก้ตามที่ต้องการ
+		// เพิ่มสไตล์อื่นๆ ตามต้องการ
+	  };
 
 	return (
 		  <div className='wrapper'> 
@@ -161,6 +171,7 @@ const Question = () => {
 					{currentQuestion > 0 && (
 					  <button
 						className='circular-button' // ปุ่มย้อนกลับ
+						style={buttonStyle}
 						onClick={handlePreviousQuestion}
 					  >
 						&lt;
@@ -170,9 +181,7 @@ const Question = () => {
 				  {showScore ? (
 					<Row>
 					  <Col>
-						<div className='question'>
-							
-						</div>
+					  
 					  </Col>
 					</Row>
 				  ) : (
@@ -223,4 +232,3 @@ const Question = () => {
 };
 
 export default Question;
-

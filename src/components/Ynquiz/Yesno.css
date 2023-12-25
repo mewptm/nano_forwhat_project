@@ -151,7 +151,6 @@
       padding-top: 20px;
       
     }
-    
     .imgmedia {
       width: 100%;
       height: auto;
@@ -242,7 +241,6 @@
       transform: translateX(-200px);
     }
   }
-  
   
   @media screen and (max-width: 576px) {
     .Ynquiztion {

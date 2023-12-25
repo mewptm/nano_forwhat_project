@@ -41,15 +41,6 @@ function Calendar_1() {
             <Button className='next-button'>ถัดไป</Button> {/* Changed button to Ant Design's Button component */}
           </Link>
       </div>
-      <div className='chevron-icon'>
-          <Link to="/yesno_30">
-          <Button // Changed button to Ant Design's Button component
-          shape="circle"
-          style={{ left: 100, top: 10, fontSize:'22px', width: '50px', height: '50px'  }}
-          icon={<VscChevronLeft />}
-        />
-      </Link>
-      </div>
     </div>
   );
 }
