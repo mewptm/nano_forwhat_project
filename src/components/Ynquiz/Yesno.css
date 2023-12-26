@@ -243,6 +243,10 @@
   }
   
   @media screen and (max-width: 576px) {
+    .and {
+      position: relative;
+      left: 10px;
+    }
     .Ynquiztion {
       display: flex;
       font-size: 1.5rem;
@@ -264,6 +268,12 @@
       height: 40px;
       transform: translateX(-270px);
     }
+    .no-button,
+    .yes-button {
+     width: 25vw;
+     position: relative;
+     left: 5px;
+    }
   }
   
   @media screen and (max-width: 400px) {
@@ -273,7 +283,7 @@
     }
     .and {
       position: relative;
-      left: 70px;
+      left: 50px;
     }
     .Ynquiztion {
       display: flex;
@@ -288,6 +298,8 @@
       height: auto;
       display: block;
       margin: 0 auto; 
+      position: relative;
+      left: 65px;
     }
     .chevron-icon {
       font-size: 30px;
@@ -296,8 +308,9 @@
     }
     .no-button,
     .yes-button {
+     width: 30vw;
      position: relative;
-     left: 70px;
+     left: 60px;
     }
   }
   

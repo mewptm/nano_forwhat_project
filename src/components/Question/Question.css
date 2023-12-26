@@ -42,8 +42,8 @@
   background-color: #FFFF;
   border: 1px solid #ccc;
   color: rgb(13, 13, 13);
-  border-radius: 5px;
-  box-shadow: 6px 6px 4px 2px #b2b2b2;
+  border-radius: 25px;
+  box-shadow: 10px 10px 8px 6px #b2b2b2;
   font-size: larger;
   cursor: pointer;
   text-align :center;
@@ -64,7 +64,7 @@
 .highlight {
   background-color: #757575;
   color: rgb(255, 255, 255);
-  box-shadow: 6px 6px 4px 2px #696969;
+  box-shadow: 10px 10px 8px 6px #696969;
 }
 
 .next{
@@ -75,8 +75,8 @@
   background-color: #FFFF;
   border: 1px solid #ccc;
   color: rgb(13, 13, 13);
-  border-radius: 5px;
-  box-shadow: 8px 8px 6px 4px #b2b2b2;
+  border-radius: 25px;
+  box-shadow: 10px 10px 8px 6px #b2b2b2;
   font-size: larger;
   cursor: pointer;
   text-align :center; 
@@ -85,7 +85,7 @@
 .next:hover{
   background-color: #dcdcdc;
   color: #000000;
-  box-shadow: 8px 8px 6px 4px #696969;
+  box-shadow: 10px 10px 8px 6px #696969;
 }
 
 .next:active {
